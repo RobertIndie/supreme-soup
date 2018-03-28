@@ -2,29 +2,32 @@
 
 using namespace std;
 
+typedef long long ll;
+
 int main()
 {
     int n,k,T;
     cin >> n >> k >> T;
+    ll turn = 0;
+    int number = 0;
     int step = 1;
-    int number = 1;
-    int times = 0;
-    int result = 1;
-    for(int i = 0;i!=T-1;)
+    ll result = 0;
+    int flag = 2;
+    for(int i =0;i<T;)
     {
+        if(flag<=0)
+            step++;
+        flag--;
         number += step;
-        step++;
-        while(number>=k-1)
+        number = number % k;
+        if(turn%n==0)
         {
-            number-=k;
-        }
-        times ++;
-        if(times%n==0)
-        {
+            //轮到栋栋
             i++;
-            result+=number;
+            result += number;
         }
+        turn++;
     }
-    cout<<result;
+    cout << result;
     return 0;
 }
