@@ -9,11 +9,6 @@ struct Bridge
     int a,b,w;
 };
 
-void kruskal()
-{
-
-}
-
 bool compare(const Bridge &a,const Bridge &b)
 {
     return a.w<b.w;
