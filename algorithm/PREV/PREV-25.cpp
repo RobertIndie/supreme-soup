@@ -40,10 +40,11 @@ int main()
         bs.push_back(b);
     }
 
-    for(int i = 0;i<n;i++)
+    for(int i = 1;i<=n;i++)
     {
         Bridge b;
         cin>>b.w;
+        if(b.w==-1)continue;
         b.a = 0;
         b.b = i;
         bs.push_back(b);
