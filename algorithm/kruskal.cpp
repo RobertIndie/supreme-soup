@@ -22,7 +22,7 @@ int find(int k)
 int main()
 {
     
-    for(int i = 0;i<7;i++)
+    for(int i = 1;i<=7;i++)
         n[i]=i;
 
     Bridge bs[11] = {
