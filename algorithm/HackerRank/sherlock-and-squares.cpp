@@ -8,15 +8,7 @@ https://www.hackerrank.com/challenges/sherlock-and-squares/problem
 using namespace std;
 
 int squares(int a, int b) {
-    int result = 0;
-    int min = sqrt(a);
-    int max = sqrt(b)+1;
-    for(int i=min;i<=max;i++)
-    {
-        if(i*i>=a && i*i<=b)
-            result++;
-    }
-    return result;
+    return (int)sqrt(b)-(int)sqrt(a-1);
 }
 
 int main() {
