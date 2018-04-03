@@ -9,13 +9,12 @@ using namespace std;
 
 int squares(int a, int b) {
     int result = 0;
-    for(int i=a;i<=b;i++)
+    int min = sqrt(a);
+    int max = sqrt(b)+1;
+    for(int i=min;i<=max;i++)
     {
-        double t = sqrt(i);
-        if(t-(int)t==0)
-        {
+        if(i*i>=a && i*i<=b)
             result++;
-        }
     }
     return result;
 }
