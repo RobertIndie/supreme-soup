@@ -1,5 +1,7 @@
 /*
 https://www.hackerrank.com/challenges/cut-the-sticks/problem
+Fuck this problem.I think my code is a good solution to this problem,but some fucking cases tell me that was wrong,
+and that fucking cases even not adapt to this problem.
 */
 
 #include <bits/stdc++.h>
