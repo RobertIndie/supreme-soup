@@ -1,3 +1,12 @@
+/*
+    代入两个值解多项式
+    1. 给定多项式式子，作为黑匣子
+    2. 代入 1 得出各系数的和为 r
+    3. 代入 r+1 得出结果 r2
+    4. 将 r2 转成 r+1 进制得到result
+    5. result 各个位就是最终各个系数的结果
+*/
+
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -6,7 +15,7 @@ using namespace std;
 
 typedef double data_type;
 
-int compute(const data_type *p,const int p_count,const data_type input){
+data_type compute(const data_type *p,const int p_count,const data_type input){
     data_type result=0;
     for(int i=p_count-1,t=0;i>=0;i--,t++){
         result += p[i]*pow(input,t);
